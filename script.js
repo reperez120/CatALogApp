@@ -85,7 +85,7 @@ function runCatData() {
       })
     .then(breeds => getCats(cat, state.searchArea, breeds))
     .catch(err => {
-       $('#js-error-message').text(`Something went wrong: Try searching a different zipcode. Boston area zipcodes are currently not working. ${err.message}`);
+       $('#js-error-message').text(`Something went wrong: Try searching a different zipcode. ${err.message}`);
      });
   }
 
@@ -111,7 +111,7 @@ function getCats(type, searchArea, breeds) {
     })
     .then(displayResults)
     .catch(err => {
-      $('#js-error-message').text(`Something went wrong: Try searching a different zipcode. Boston area zipcodes are currently not working. ${err.message}`);
+      $('#js-error-message').text(`Something went wrong: Try searching a different zipcode. ${err.message}`);
      });
 }
 
